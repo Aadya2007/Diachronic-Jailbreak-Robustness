@@ -1,0 +1,9 @@
+{
+  "sample_size": 100,
+  "raw_agreement": 0.89,
+  "cohen_kappa": 0.78,
+  "ann1_accuracy": 0.92,
+  "ann2_accuracy": 0.97,
+  "mean_semantic_invariance": 4.68,
+  "mean_dialect_authenticity": 4.6
+}

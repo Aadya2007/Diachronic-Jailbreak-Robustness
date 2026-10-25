@@ -1,0 +1,2870 @@
+{
+  "Word TF-IDF + Logistic Regression": {
+    "C1_baseline": {
+      "optimal_tau": 0.5,
+      "optimal_fpr": 0.08,
+      "optimal_recall": 0.84,
+      "optimal_f1": 0.875,
+      "default_fpr": 0.08,
+      "default_recall": 0.84,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.1,
+          "fpr": 0.94,
+          "recall": 1.0,
+          "f1": 0.6803,
+          "youden_j": 0.06
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.84,
+          "recall": 0.98,
+          "f1": 0.695,
+          "youden_j": 0.14
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.63,
+          "recall": 0.95,
+          "f1": 0.7364,
+          "youden_j": 0.32
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.49,
+          "recall": 0.95,
+          "f1": 0.7787,
+          "youden_j": 0.46
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.33,
+          "recall": 0.94,
+          "f1": 0.8282,
+          "youden_j": 0.61
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.22,
+          "recall": 0.92,
+          "f1": 0.8598,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.18,
+          "recall": 0.88,
+          "f1": 0.8544,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.13,
+          "recall": 0.87,
+          "f1": 0.87,
+          "youden_j": 0.74
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.08,
+          "recall": 0.84,
+          "f1": 0.875,
+          "youden_j": 0.76
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.04,
+          "recall": 0.78,
+          "f1": 0.8571,
+          "youden_j": 0.74
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.02,
+          "recall": 0.73,
+          "f1": 0.8343,
+          "youden_j": 0.71
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.01,
+          "recall": 0.67,
+          "f1": 0.7976,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.01,
+          "recall": 0.6,
+          "f1": 0.7453,
+          "youden_j": 0.59
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.01,
+          "recall": 0.51,
+          "f1": 0.6711,
+          "youden_j": 0.5
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.34,
+          "f1": 0.5075,
+          "youden_j": 0.34
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.2,
+          "f1": 0.3333,
+          "youden_j": 0.2
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.04,
+          "f1": 0.0769,
+          "youden_j": 0.04
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C0_neutral": {
+      "optimal_tau": 0.5,
+      "optimal_fpr": 0.11,
+      "optimal_recall": 0.75,
+      "optimal_f1": 0.8065,
+      "default_fpr": 0.11,
+      "default_recall": 0.75,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.1,
+          "fpr": 0.96,
+          "recall": 1.0,
+          "f1": 0.6757,
+          "youden_j": 0.04
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.88,
+          "recall": 0.99,
+          "f1": 0.6899,
+          "youden_j": 0.11
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.85,
+          "recall": 0.97,
+          "f1": 0.6879,
+          "youden_j": 0.12
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.63,
+          "recall": 0.92,
+          "f1": 0.7216,
+          "youden_j": 0.29
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.48,
+          "recall": 0.9,
+          "f1": 0.7563,
+          "youden_j": 0.42
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.34,
+          "recall": 0.86,
+          "f1": 0.7818,
+          "youden_j": 0.52
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.22,
+          "recall": 0.84,
+          "f1": 0.8155,
+          "youden_j": 0.62
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.17,
+          "recall": 0.8,
+          "f1": 0.8122,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.11,
+          "recall": 0.75,
+          "f1": 0.8065,
+          "youden_j": 0.64
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.07,
+          "recall": 0.63,
+          "f1": 0.7412,
+          "youden_j": 0.56
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.03,
+          "recall": 0.59,
+          "f1": 0.7284,
+          "youden_j": 0.56
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.01,
+          "recall": 0.46,
+          "f1": 0.6259,
+          "youden_j": 0.45
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.01,
+          "recall": 0.37,
+          "f1": 0.5362,
+          "youden_j": 0.36
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.27,
+          "f1": 0.4252,
+          "youden_j": 0.27
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.11,
+          "f1": 0.1982,
+          "youden_j": 0.11
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C2_historical": {
+      "optimal_tau": 0.35,
+      "optimal_fpr": 0.14,
+      "optimal_recall": 0.82,
+      "optimal_f1": 0.8367,
+      "default_fpr": 0.03,
+      "default_recall": 0.62,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 0.94,
+          "recall": 0.98,
+          "f1": 0.6712,
+          "youden_j": 0.04
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.68,
+          "recall": 0.96,
+          "f1": 0.7273,
+          "youden_j": 0.28
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.53,
+          "recall": 0.93,
+          "f1": 0.7561,
+          "youden_j": 0.4
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.31,
+          "recall": 0.92,
+          "f1": 0.8251,
+          "youden_j": 0.61
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.24,
+          "recall": 0.87,
+          "f1": 0.8246,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.14,
+          "recall": 0.82,
+          "f1": 0.8367,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.08,
+          "recall": 0.74,
+          "f1": 0.8132,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.05,
+          "recall": 0.68,
+          "f1": 0.7861,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.62,
+          "f1": 0.7515,
+          "youden_j": 0.59
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.53,
+          "f1": 0.6928,
+          "youden_j": 0.53
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.44,
+          "f1": 0.6111,
+          "youden_j": 0.44
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.38,
+          "f1": 0.5507,
+          "youden_j": 0.38
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.26,
+          "f1": 0.4127,
+          "youden_j": 0.26
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.18,
+          "f1": 0.3051,
+          "youden_j": 0.18
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.09,
+          "f1": 0.1651,
+          "youden_j": 0.09
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C3_regional": {
+      "optimal_tau": 0.5,
+      "optimal_fpr": 0.14,
+      "optimal_recall": 0.84,
+      "optimal_f1": 0.8485,
+      "default_fpr": 0.14,
+      "default_recall": 0.84,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.96,
+          "recall": 0.99,
+          "f1": 0.6712,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.86,
+          "recall": 0.98,
+          "f1": 0.6901,
+          "youden_j": 0.12
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.66,
+          "recall": 0.95,
+          "f1": 0.728,
+          "youden_j": 0.29
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.55,
+          "recall": 0.94,
+          "f1": 0.755,
+          "youden_j": 0.39
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.44,
+          "recall": 0.93,
+          "f1": 0.7848,
+          "youden_j": 0.49
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.3,
+          "recall": 0.92,
+          "f1": 0.8288,
+          "youden_j": 0.62
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.23,
+          "recall": 0.85,
+          "f1": 0.8173,
+          "youden_j": 0.62
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.14,
+          "recall": 0.84,
+          "f1": 0.8485,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.1,
+          "recall": 0.78,
+          "f1": 0.8298,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.08,
+          "recall": 0.74,
+          "f1": 0.8132,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.02,
+          "recall": 0.63,
+          "f1": 0.7636,
+          "youden_j": 0.61
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.01,
+          "recall": 0.5,
+          "f1": 0.6623,
+          "youden_j": 0.49
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.01,
+          "recall": 0.34,
+          "f1": 0.5037,
+          "youden_j": 0.33
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.19,
+          "f1": 0.3193,
+          "youden_j": 0.19
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.08,
+          "f1": 0.1481,
+          "youden_j": 0.08
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.02,
+          "f1": 0.0392,
+          "youden_j": 0.02
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C4_combined": {
+      "optimal_tau": 0.4,
+      "optimal_fpr": 0.1,
+      "optimal_recall": 0.85,
+      "optimal_f1": 0.8718,
+      "default_fpr": 0.03,
+      "default_recall": 0.61,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.93,
+          "recall": 0.99,
+          "f1": 0.6781,
+          "youden_j": 0.06
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.79,
+          "recall": 0.96,
+          "f1": 0.6982,
+          "youden_j": 0.17
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.58,
+          "recall": 0.94,
+          "f1": 0.746,
+          "youden_j": 0.36
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.33,
+          "recall": 0.9,
+          "f1": 0.8072,
+          "youden_j": 0.57
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.19,
+          "recall": 0.89,
+          "f1": 0.8558,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.1,
+          "recall": 0.85,
+          "f1": 0.8718,
+          "youden_j": 0.75
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.06,
+          "recall": 0.74,
+          "f1": 0.8222,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.61,
+          "f1": 0.7439,
+          "youden_j": 0.58
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.47,
+          "f1": 0.6395,
+          "youden_j": 0.47
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.36,
+          "f1": 0.5294,
+          "youden_j": 0.36
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.24,
+          "f1": 0.3871,
+          "youden_j": 0.24
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.17,
+          "f1": 0.2906,
+          "youden_j": 0.17
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.11,
+          "f1": 0.1982,
+          "youden_j": 0.11
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    }
+  },
+  "Word TF-IDF + LinearSVC": {
+    "C1_baseline": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.12,
+      "optimal_recall": 0.89,
+      "optimal_f1": 0.8856,
+      "default_fpr": 0.08,
+      "default_recall": 0.82,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.98,
+          "recall": 1.0,
+          "f1": 0.6711,
+          "youden_j": 0.02
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.92,
+          "recall": 1.0,
+          "f1": 0.6849,
+          "youden_j": 0.08
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.71,
+          "recall": 0.97,
+          "f1": 0.7239,
+          "youden_j": 0.26
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.53,
+          "recall": 0.97,
+          "f1": 0.776,
+          "youden_j": 0.44
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.32,
+          "recall": 0.95,
+          "f1": 0.837,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.17,
+          "recall": 0.92,
+          "f1": 0.8804,
+          "youden_j": 0.75
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.12,
+          "recall": 0.89,
+          "f1": 0.8856,
+          "youden_j": 0.77
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.08,
+          "recall": 0.82,
+          "f1": 0.8632,
+          "youden_j": 0.74
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.05,
+          "recall": 0.75,
+          "f1": 0.8333,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.03,
+          "recall": 0.73,
+          "f1": 0.8295,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.65,
+          "f1": 0.7879,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.45,
+          "f1": 0.6207,
+          "youden_j": 0.45
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.18,
+          "f1": 0.3051,
+          "youden_j": 0.18
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C0_neutral": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.19,
+      "optimal_recall": 0.86,
+      "optimal_f1": 0.839,
+      "default_fpr": 0.13,
+      "default_recall": 0.78,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.97,
+          "recall": 1.0,
+          "f1": 0.6734,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.92,
+          "recall": 1.0,
+          "f1": 0.6849,
+          "youden_j": 0.08
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.85,
+          "recall": 0.98,
+          "f1": 0.6926,
+          "youden_j": 0.13
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.61,
+          "recall": 0.97,
+          "f1": 0.7519,
+          "youden_j": 0.36
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.4,
+          "recall": 0.9,
+          "f1": 0.7826,
+          "youden_j": 0.5
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.19,
+          "recall": 0.86,
+          "f1": 0.839,
+          "youden_j": 0.67
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.13,
+          "recall": 0.78,
+          "f1": 0.8168,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.08,
+          "recall": 0.63,
+          "f1": 0.7368,
+          "youden_j": 0.55
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.03,
+          "recall": 0.53,
+          "f1": 0.6795,
+          "youden_j": 0.5
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.02,
+          "recall": 0.49,
+          "f1": 0.649,
+          "youden_j": 0.47
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.31,
+          "f1": 0.4733,
+          "youden_j": 0.31
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.12,
+          "f1": 0.2143,
+          "youden_j": 0.12
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C2_historical": {
+      "optimal_tau": 0.35,
+      "optimal_fpr": 0.17,
+      "optimal_recall": 0.85,
+      "optimal_f1": 0.8416,
+      "default_fpr": 0.03,
+      "default_recall": 0.62,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.97,
+          "recall": 1.0,
+          "f1": 0.6734,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.77,
+          "recall": 0.97,
+          "f1": 0.708,
+          "youden_j": 0.2
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.51,
+          "recall": 0.95,
+          "f1": 0.7724,
+          "youden_j": 0.44
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.32,
+          "recall": 0.91,
+          "f1": 0.8161,
+          "youden_j": 0.59
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.17,
+          "recall": 0.85,
+          "f1": 0.8416,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.09,
+          "recall": 0.74,
+          "f1": 0.8087,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.05,
+          "recall": 0.7,
+          "f1": 0.8,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.62,
+          "f1": 0.7515,
+          "youden_j": 0.59
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.01,
+          "recall": 0.46,
+          "f1": 0.6259,
+          "youden_j": 0.45
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.01,
+          "recall": 0.35,
+          "f1": 0.5147,
+          "youden_j": 0.34
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.16,
+          "f1": 0.2759,
+          "youden_j": 0.16
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.08,
+          "f1": 0.1481,
+          "youden_j": 0.08
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C3_regional": {
+      "optimal_tau": 0.5,
+      "optimal_fpr": 0.16,
+      "optimal_recall": 0.83,
+      "optimal_f1": 0.8342,
+      "default_fpr": 0.16,
+      "default_recall": 0.83,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.98,
+          "recall": 1.0,
+          "f1": 0.6711,
+          "youden_j": 0.02
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.94,
+          "recall": 1.0,
+          "f1": 0.6803,
+          "youden_j": 0.06
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.76,
+          "recall": 0.98,
+          "f1": 0.7153,
+          "youden_j": 0.22
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.55,
+          "recall": 0.96,
+          "f1": 0.7649,
+          "youden_j": 0.41
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.39,
+          "recall": 0.94,
+          "f1": 0.8069,
+          "youden_j": 0.55
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.26,
+          "recall": 0.87,
+          "f1": 0.8169,
+          "youden_j": 0.61
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.16,
+          "recall": 0.83,
+          "f1": 0.8342,
+          "youden_j": 0.67
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.1,
+          "recall": 0.75,
+          "f1": 0.8108,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.03,
+          "recall": 0.69,
+          "f1": 0.8023,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.49,
+          "f1": 0.6577,
+          "youden_j": 0.49
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.29,
+          "f1": 0.4496,
+          "youden_j": 0.29
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.09,
+          "f1": 0.1651,
+          "youden_j": 0.09
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C4_combined": {
+      "optimal_tau": 0.35,
+      "optimal_fpr": 0.2,
+      "optimal_recall": 0.89,
+      "optimal_f1": 0.8517,
+      "default_fpr": 0.01,
+      "default_recall": 0.53,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.93,
+          "recall": 1.0,
+          "f1": 0.6826,
+          "youden_j": 0.07
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.78,
+          "recall": 0.97,
+          "f1": 0.7055,
+          "youden_j": 0.19
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.49,
+          "recall": 0.94,
+          "f1": 0.7737,
+          "youden_j": 0.45
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.2,
+          "recall": 0.89,
+          "f1": 0.8517,
+          "youden_j": 0.69
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.11,
+          "recall": 0.79,
+          "f1": 0.8316,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.06,
+          "recall": 0.69,
+          "f1": 0.7886,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.01,
+          "recall": 0.53,
+          "f1": 0.6883,
+          "youden_j": 0.52
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.34,
+          "f1": 0.5075,
+          "youden_j": 0.34
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.16,
+          "f1": 0.2759,
+          "youden_j": 0.16
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.07,
+          "f1": 0.1308,
+          "youden_j": 0.07
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.02,
+          "f1": 0.0392,
+          "youden_j": 0.02
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    }
+  },
+  "Subword Char N-gram + Logistic Regression": {
+    "C1_baseline": {
+      "optimal_tau": 0.55,
+      "optimal_fpr": 0.0,
+      "optimal_recall": 0.81,
+      "optimal_f1": 0.895,
+      "default_fpr": 0.04,
+      "default_recall": 0.83,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.88,
+          "recall": 1.0,
+          "f1": 0.6944,
+          "youden_j": 0.12
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.71,
+          "recall": 0.98,
+          "f1": 0.7286,
+          "youden_j": 0.27
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.55,
+          "recall": 0.98,
+          "f1": 0.7747,
+          "youden_j": 0.43
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.43,
+          "recall": 0.97,
+          "f1": 0.8083,
+          "youden_j": 0.54
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.26,
+          "recall": 0.95,
+          "f1": 0.8597,
+          "youden_j": 0.69
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.21,
+          "recall": 0.91,
+          "f1": 0.8585,
+          "youden_j": 0.7
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.09,
+          "recall": 0.86,
+          "f1": 0.8821,
+          "youden_j": 0.77
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.04,
+          "recall": 0.83,
+          "f1": 0.8877,
+          "youden_j": 0.79
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.81,
+          "f1": 0.895,
+          "youden_j": 0.81
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.75,
+          "f1": 0.8571,
+          "youden_j": 0.75
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.64,
+          "f1": 0.7805,
+          "youden_j": 0.64
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.55,
+          "f1": 0.7097,
+          "youden_j": 0.55
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.4,
+          "f1": 0.5714,
+          "youden_j": 0.4
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.31,
+          "f1": 0.4733,
+          "youden_j": 0.31
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.13,
+          "f1": 0.2301,
+          "youden_j": 0.13
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C0_neutral": {
+      "optimal_tau": 0.55,
+      "optimal_fpr": 0.08,
+      "optimal_recall": 0.82,
+      "optimal_f1": 0.8632,
+      "default_fpr": 0.17,
+      "default_recall": 0.89,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.98,
+          "recall": 0.99,
+          "f1": 0.6667,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.89,
+          "recall": 0.99,
+          "f1": 0.6875,
+          "youden_j": 0.1
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.79,
+          "recall": 0.98,
+          "f1": 0.7076,
+          "youden_j": 0.19
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.6,
+          "recall": 0.97,
+          "f1": 0.7549,
+          "youden_j": 0.37
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.43,
+          "recall": 0.97,
+          "f1": 0.8083,
+          "youden_j": 0.54
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.27,
+          "recall": 0.92,
+          "f1": 0.8402,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.17,
+          "recall": 0.89,
+          "f1": 0.8641,
+          "youden_j": 0.72
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.08,
+          "recall": 0.82,
+          "f1": 0.8632,
+          "youden_j": 0.74
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.03,
+          "recall": 0.72,
+          "f1": 0.8229,
+          "youden_j": 0.69
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.65,
+          "f1": 0.7879,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.51,
+          "f1": 0.6755,
+          "youden_j": 0.51
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.34,
+          "f1": 0.5075,
+          "youden_j": 0.34
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.24,
+          "f1": 0.3871,
+          "youden_j": 0.24
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.07,
+          "f1": 0.1308,
+          "youden_j": 0.07
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C2_historical": {
+      "optimal_tau": 0.4,
+      "optimal_fpr": 0.17,
+      "optimal_recall": 0.85,
+      "optimal_f1": 0.8416,
+      "default_fpr": 0.03,
+      "default_recall": 0.7,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.97,
+          "recall": 1.0,
+          "f1": 0.6734,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.89,
+          "recall": 0.99,
+          "f1": 0.6875,
+          "youden_j": 0.1
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.63,
+          "recall": 0.98,
+          "f1": 0.751,
+          "youden_j": 0.35
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.5,
+          "recall": 0.96,
+          "f1": 0.7805,
+          "youden_j": 0.46
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.33,
+          "recall": 0.93,
+          "f1": 0.823,
+          "youden_j": 0.6
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.17,
+          "recall": 0.85,
+          "f1": 0.8416,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.1,
+          "recall": 0.76,
+          "f1": 0.8172,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.7,
+          "f1": 0.8092,
+          "youden_j": 0.67
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.02,
+          "recall": 0.62,
+          "f1": 0.7561,
+          "youden_j": 0.6
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.53,
+          "f1": 0.6928,
+          "youden_j": 0.53
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.44,
+          "f1": 0.6111,
+          "youden_j": 0.44
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.27,
+          "f1": 0.4252,
+          "youden_j": 0.27
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.13,
+          "f1": 0.2301,
+          "youden_j": 0.13
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.05,
+          "f1": 0.0952,
+          "youden_j": 0.05
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C3_regional": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.04,
+      "optimal_recall": 0.84,
+      "optimal_f1": 0.8936,
+      "default_fpr": 0.03,
+      "default_recall": 0.75,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 0.93,
+          "recall": 0.99,
+          "f1": 0.6781,
+          "youden_j": 0.06
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.76,
+          "recall": 0.98,
+          "f1": 0.7153,
+          "youden_j": 0.22
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.6,
+          "recall": 0.97,
+          "f1": 0.7549,
+          "youden_j": 0.37
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.42,
+          "recall": 0.97,
+          "f1": 0.8117,
+          "youden_j": 0.55
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.25,
+          "recall": 0.92,
+          "f1": 0.8479,
+          "youden_j": 0.67
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.14,
+          "recall": 0.87,
+          "f1": 0.8657,
+          "youden_j": 0.73
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.04,
+          "recall": 0.84,
+          "f1": 0.8936,
+          "youden_j": 0.8
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.75,
+          "f1": 0.8427,
+          "youden_j": 0.72
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.01,
+          "recall": 0.64,
+          "f1": 0.7758,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.52,
+          "f1": 0.6842,
+          "youden_j": 0.52
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.41,
+          "f1": 0.5816,
+          "youden_j": 0.41
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "youden_j": 0.25
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.13,
+          "f1": 0.2301,
+          "youden_j": 0.13
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.05,
+          "f1": 0.0952,
+          "youden_j": 0.05
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C4_combined": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.04,
+      "optimal_recall": 0.8,
+      "optimal_f1": 0.8696,
+      "default_fpr": 0.01,
+      "default_recall": 0.63,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.91,
+          "recall": 0.99,
+          "f1": 0.6828,
+          "youden_j": 0.08
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.62,
+          "recall": 0.98,
+          "f1": 0.7538,
+          "youden_j": 0.36
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.43,
+          "recall": 0.94,
+          "f1": 0.7932,
+          "youden_j": 0.51
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.21,
+          "recall": 0.9,
+          "f1": 0.8531,
+          "youden_j": 0.69
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.04,
+          "recall": 0.8,
+          "f1": 0.8696,
+          "youden_j": 0.76
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.01,
+          "recall": 0.63,
+          "f1": 0.7683,
+          "youden_j": 0.62
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.01,
+          "recall": 0.5,
+          "f1": 0.6623,
+          "youden_j": 0.49
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.01,
+          "recall": 0.38,
+          "f1": 0.5468,
+          "youden_j": 0.37
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.26,
+          "f1": 0.4127,
+          "youden_j": 0.26
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.14,
+          "f1": 0.2456,
+          "youden_j": 0.14
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.09,
+          "f1": 0.1651,
+          "youden_j": 0.09
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    }
+  },
+  "Subword Char N-gram + Ridge Margin": {
+    "C1_baseline": {
+      "optimal_tau": 0.5,
+      "optimal_fpr": 0.04,
+      "optimal_recall": 0.83,
+      "optimal_f1": 0.8877,
+      "default_fpr": 0.04,
+      "default_recall": 0.83,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.96,
+          "recall": 1.0,
+          "f1": 0.6757,
+          "youden_j": 0.04
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.75,
+          "recall": 1.0,
+          "f1": 0.7273,
+          "youden_j": 0.25
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.52,
+          "recall": 0.97,
+          "f1": 0.7791,
+          "youden_j": 0.45
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.31,
+          "recall": 0.94,
+          "f1": 0.8356,
+          "youden_j": 0.63
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.16,
+          "recall": 0.92,
+          "f1": 0.8846,
+          "youden_j": 0.76
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.04,
+          "recall": 0.83,
+          "f1": 0.8877,
+          "youden_j": 0.79
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.02,
+          "recall": 0.78,
+          "f1": 0.8667,
+          "youden_j": 0.76
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.64,
+          "f1": 0.7805,
+          "youden_j": 0.64
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.46,
+          "f1": 0.6301,
+          "youden_j": 0.46
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.23,
+          "f1": 0.374,
+          "youden_j": 0.23
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C0_neutral": {
+      "optimal_tau": 0.55,
+      "optimal_fpr": 0.06,
+      "optimal_recall": 0.79,
+      "optimal_f1": 0.8541,
+      "default_fpr": 0.25,
+      "default_recall": 0.91,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.25,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.93,
+          "recall": 0.99,
+          "f1": 0.6781,
+          "youden_j": 0.06
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.8,
+          "recall": 0.99,
+          "f1": 0.7097,
+          "youden_j": 0.19
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.51,
+          "recall": 0.95,
+          "f1": 0.7724,
+          "youden_j": 0.44
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.25,
+          "recall": 0.91,
+          "f1": 0.8426,
+          "youden_j": 0.66
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.06,
+          "recall": 0.79,
+          "f1": 0.8541,
+          "youden_j": 0.73
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.02,
+          "recall": 0.63,
+          "f1": 0.7636,
+          "youden_j": 0.61
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.48,
+          "f1": 0.6486,
+          "youden_j": 0.48
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.3,
+          "f1": 0.4615,
+          "youden_j": 0.3
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.07,
+          "f1": 0.1308,
+          "youden_j": 0.07
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C2_historical": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.11,
+      "optimal_recall": 0.84,
+      "optimal_f1": 0.8615,
+      "default_fpr": 0.03,
+      "default_recall": 0.71,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.99,
+          "recall": 1.0,
+          "f1": 0.6689,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.91,
+          "recall": 1.0,
+          "f1": 0.6873,
+          "youden_j": 0.09
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.64,
+          "recall": 0.99,
+          "f1": 0.7529,
+          "youden_j": 0.35
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.33,
+          "recall": 0.93,
+          "f1": 0.823,
+          "youden_j": 0.6
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.11,
+          "recall": 0.84,
+          "f1": 0.8615,
+          "youden_j": 0.73
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.03,
+          "recall": 0.71,
+          "f1": 0.8161,
+          "youden_j": 0.68
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.58,
+          "f1": 0.7342,
+          "youden_j": 0.58
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.33,
+          "f1": 0.4962,
+          "youden_j": 0.33
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.09,
+          "f1": 0.1651,
+          "youden_j": 0.09
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C3_regional": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.08,
+      "optimal_recall": 0.86,
+      "optimal_f1": 0.8866,
+      "default_fpr": 0.01,
+      "default_recall": 0.76,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.25,
+          "fpr": 0.97,
+          "recall": 1.0,
+          "f1": 0.6734,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.79,
+          "recall": 0.98,
+          "f1": 0.7076,
+          "youden_j": 0.19
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.54,
+          "recall": 0.97,
+          "f1": 0.7729,
+          "youden_j": 0.43
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.27,
+          "recall": 0.92,
+          "f1": 0.8402,
+          "youden_j": 0.65
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.08,
+          "recall": 0.86,
+          "f1": 0.8866,
+          "youden_j": 0.78
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.01,
+          "recall": 0.76,
+          "f1": 0.8588,
+          "youden_j": 0.75
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.0,
+          "recall": 0.57,
+          "f1": 0.7261,
+          "youden_j": 0.57
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.29,
+          "f1": 0.4496,
+          "youden_j": 0.29
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.11,
+          "f1": 0.1982,
+          "youden_j": 0.11
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.02,
+          "f1": 0.0392,
+          "youden_j": 0.02
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    },
+    "C4_combined": {
+      "optimal_tau": 0.45,
+      "optimal_fpr": 0.1,
+      "optimal_recall": 0.82,
+      "optimal_f1": 0.8542,
+      "default_fpr": 0.01,
+      "default_recall": 0.58,
+      "sweeps": [
+        {
+          "tau": 0.05,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.1,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.15,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.2,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.25,
+          "fpr": 1.0,
+          "recall": 1.0,
+          "f1": 0.6667,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.3,
+          "fpr": 0.97,
+          "recall": 1.0,
+          "f1": 0.6734,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.35,
+          "fpr": 0.75,
+          "recall": 0.99,
+          "f1": 0.7226,
+          "youden_j": 0.24
+        },
+        {
+          "tau": 0.4,
+          "fpr": 0.33,
+          "recall": 0.91,
+          "f1": 0.8125,
+          "youden_j": 0.58
+        },
+        {
+          "tau": 0.45,
+          "fpr": 0.1,
+          "recall": 0.82,
+          "f1": 0.8542,
+          "youden_j": 0.72
+        },
+        {
+          "tau": 0.5,
+          "fpr": 0.01,
+          "recall": 0.58,
+          "f1": 0.7296,
+          "youden_j": 0.57
+        },
+        {
+          "tau": 0.55,
+          "fpr": 0.01,
+          "recall": 0.36,
+          "f1": 0.5255,
+          "youden_j": 0.35
+        },
+        {
+          "tau": 0.6,
+          "fpr": 0.0,
+          "recall": 0.11,
+          "f1": 0.1982,
+          "youden_j": 0.11
+        },
+        {
+          "tau": 0.65,
+          "fpr": 0.0,
+          "recall": 0.03,
+          "f1": 0.0583,
+          "youden_j": 0.03
+        },
+        {
+          "tau": 0.7,
+          "fpr": 0.0,
+          "recall": 0.01,
+          "f1": 0.0198,
+          "youden_j": 0.01
+        },
+        {
+          "tau": 0.75,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.8,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.85,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.9,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        },
+        {
+          "tau": 0.95,
+          "fpr": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "youden_j": 0.0
+        }
+      ]
+    }
+  }
+}

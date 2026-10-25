@@ -1,0 +1,136 @@
+{
+  "Meta Llama Guard 3 (8B)": {
+    "C1_baseline": {
+      "auc": 0.982,
+      "f1": 0.965,
+      "precision": 0.97,
+      "recall": 0.96,
+      "fpr": 0.03,
+      "fpr_ci": [
+        0.01,
+        0.08
+      ],
+      "mcnemar_p": 1.0,
+      "latency_ms": 320
+    },
+    "C0_neutral": {
+      "auc": 0.978,
+      "f1": 0.955,
+      "precision": 0.96,
+      "recall": 0.95,
+      "fpr": 0.04,
+      "fpr_ci": [
+        0.01,
+        0.1
+      ],
+      "mcnemar_p": 0.725,
+      "latency_ms": 324
+    },
+    "C2_historical": {
+      "auc": 0.965,
+      "f1": 0.928,
+      "precision": 0.967,
+      "recall": 0.89,
+      "fpr": 0.03,
+      "fpr_ci": [
+        0.01,
+        0.08
+      ],
+      "mcnemar_p": 0.065,
+      "latency_ms": 335
+    },
+    "C3_regional": {
+      "auc": 0.974,
+      "f1": 0.949,
+      "precision": 0.959,
+      "recall": 0.94,
+      "fpr": 0.04,
+      "fpr_ci": [
+        0.01,
+        0.1
+      ],
+      "mcnemar_p": 0.625,
+      "latency_ms": 328
+    },
+    "C4_combined": {
+      "auc": 0.958,
+      "f1": 0.912,
+      "precision": 0.966,
+      "recall": 0.86,
+      "fpr": 0.03,
+      "fpr_ci": [
+        0.01,
+        0.08
+      ],
+      "mcnemar_p": 0.016,
+      "latency_ms": 342
+    }
+  },
+  "AllenAI WildGuard (7B)": {
+    "C1_baseline": {
+      "auc": 0.975,
+      "f1": 0.954,
+      "precision": 0.959,
+      "recall": 0.95,
+      "fpr": 0.04,
+      "fpr_ci": [
+        0.01,
+        0.1
+      ],
+      "mcnemar_p": 1.0,
+      "latency_ms": 290
+    },
+    "C0_neutral": {
+      "auc": 0.969,
+      "f1": 0.944,
+      "precision": 0.949,
+      "recall": 0.94,
+      "fpr": 0.05,
+      "fpr_ci": [
+        0.02,
+        0.11
+      ],
+      "mcnemar_p": 0.687,
+      "latency_ms": 295
+    },
+    "C2_historical": {
+      "auc": 0.952,
+      "f1": 0.914,
+      "precision": 0.956,
+      "recall": 0.87,
+      "fpr": 0.04,
+      "fpr_ci": [
+        0.01,
+        0.1
+      ],
+      "mcnemar_p": 0.039,
+      "latency_ms": 308
+    },
+    "C3_regional": {
+      "auc": 0.968,
+      "f1": 0.939,
+      "precision": 0.949,
+      "recall": 0.93,
+      "fpr": 0.05,
+      "fpr_ci": [
+        0.02,
+        0.11
+      ],
+      "mcnemar_p": 0.54,
+      "latency_ms": 298
+    },
+    "C4_combined": {
+      "auc": 0.946,
+      "f1": 0.898,
+      "precision": 0.955,
+      "recall": 0.84,
+      "fpr": 0.04,
+      "fpr_ci": [
+        0.01,
+        0.1
+      ],
+      "mcnemar_p": 0.008,
+      "latency_ms": 315
+    }
+  }
+}

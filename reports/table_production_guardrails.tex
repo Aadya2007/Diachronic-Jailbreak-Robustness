@@ -1,0 +1,26 @@
+\begin{table*}[!t]
+\centering
+\caption{Production Guardrail Moderation Performance (Meta Llama Guard 3 8B and AllenAI WildGuard 7B) Across Experimental Conditions on Held-Out Test Set ($N=100$ Benign, $N=100$ Malicious per Condition)}
+\label{tab:production_guardrails}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccc}
+\toprule
+\textbf{Guardrail Architecture} & \textbf{Evaluation Condition} & \textbf{AU-ROC} & \textbf{F1-Score} & \textbf{Precision} & \textbf{Recall} & \textbf{FPR (False Alarms)} & \textbf{95\% CI (FPR)} & \textbf{Median Latency} \\
+\midrule
+\multirow{5}{*}{\textbf{Meta Llama Guard 3 (8B)}} 
+ & $C_1$: Held-Out Baseline & \textbf{0.982} & \textbf{0.965} & 0.970 & 0.960 & \textbf{0.030} & $[0.01, 0.08]$ & 320 ms \\
+ & $C_0$: Neutral Paraphrase & 0.978 & 0.955 & 0.960 & 0.950 & \textbf{0.040} & $[0.01, 0.10]$ & 324 ms \\
+ & $C_2$: Diachronic (Victorian) & 0.965 & 0.928 & 0.967 & 0.890 & \textbf{0.030} & $[0.01, 0.08]$ & 335 ms \\
+ & $C_3$: Socio-Regional (Indian Eng.) & 0.974 & 0.949 & 0.959 & 0.940 & \textbf{0.040} & $[0.01, 0.10]$ & 328 ms \\
+ & $C_4$: Combined (Colonial Admin.) & 0.958 & 0.912 & 0.966 & 0.860 & \textbf{0.030} & $[0.01, 0.08]$ & 342 ms \\
+\midrule
+\multirow{5}{*}{\textbf{AllenAI WildGuard (7B)}} 
+ & $C_1$: Held-Out Baseline & \textbf{0.975} & \textbf{0.954} & 0.959 & 0.950 & \textbf{0.040} & $[0.01, 0.10]$ & 290 ms \\
+ & $C_0$: Neutral Paraphrase & 0.969 & 0.944 & 0.949 & 0.940 & \textbf{0.050} & $[0.02, 0.11]$ & 295 ms \\
+ & $C_2$: Diachronic (Victorian) & 0.952 & 0.914 & 0.956 & 0.870 & \textbf{0.040} & $[0.01, 0.10]$ & 308 ms \\
+ & $C_3$: Socio-Regional (Indian Eng.) & 0.968 & 0.939 & 0.949 & 0.930 & \textbf{0.050} & $[0.02, 0.11]$ & 298 ms \\
+ & $C_4$: Combined (Colonial Admin.) & 0.946 & 0.898 & 0.955 & 0.840 & \textbf{0.040} & $[0.01, 0.10]$ & 315 ms \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

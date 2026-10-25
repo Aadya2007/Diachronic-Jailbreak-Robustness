@@ -1,0 +1,370 @@
+{
+  "Word TF-IDF + LogReg (unweighted)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 10,
+      "n_benign": 10,
+      "fpr": 1.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.692,
+        1.0
+      ],
+      "exact_p": 0.001953125
+    },
+    "regional": {
+      "fp": 10,
+      "n_benign": 10,
+      "fpr": 1.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.692,
+        1.0
+      ],
+      "exact_p": 0.001953125
+    },
+    "combined": {
+      "fp": 10,
+      "n_benign": 10,
+      "fpr": 1.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.692,
+        1.0
+      ],
+      "exact_p": 0.001953125
+    }
+  },
+  "Word TF-IDF + LogReg (balanced)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 3,
+      "n_benign": 10,
+      "fpr": 0.3,
+      "recall": 1.0,
+      "ci_95": [
+        0.067,
+        0.652
+      ],
+      "exact_p": 0.25
+    },
+    "regional": {
+      "fp": 2,
+      "n_benign": 10,
+      "fpr": 0.2,
+      "recall": 1.0,
+      "ci_95": [
+        0.025,
+        0.556
+      ],
+      "exact_p": 0.5
+    },
+    "combined": {
+      "fp": 7,
+      "n_benign": 10,
+      "fpr": 0.7,
+      "recall": 1.0,
+      "ci_95": [
+        0.348,
+        0.933
+      ],
+      "exact_p": 0.015625
+    }
+  },
+  "Word TF-IDF + LinearSVC (unweighted)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 5,
+      "n_benign": 10,
+      "fpr": 0.5,
+      "recall": 1.0,
+      "ci_95": [
+        0.187,
+        0.813
+      ],
+      "exact_p": 0.0625
+    },
+    "regional": {
+      "fp": 2,
+      "n_benign": 10,
+      "fpr": 0.2,
+      "recall": 1.0,
+      "ci_95": [
+        0.025,
+        0.556
+      ],
+      "exact_p": 0.5
+    },
+    "combined": {
+      "fp": 8,
+      "n_benign": 10,
+      "fpr": 0.8,
+      "recall": 1.0,
+      "ci_95": [
+        0.444,
+        0.975
+      ],
+      "exact_p": 0.0078125
+    }
+  },
+  "Word TF-IDF + LinearSVC (balanced)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 3,
+      "n_benign": 10,
+      "fpr": 0.3,
+      "recall": 1.0,
+      "ci_95": [
+        0.067,
+        0.652
+      ],
+      "exact_p": 0.25
+    },
+    "regional": {
+      "fp": 2,
+      "n_benign": 10,
+      "fpr": 0.2,
+      "recall": 1.0,
+      "ci_95": [
+        0.025,
+        0.556
+      ],
+      "exact_p": 0.5
+    },
+    "combined": {
+      "fp": 7,
+      "n_benign": 10,
+      "fpr": 0.7,
+      "recall": 1.0,
+      "ci_95": [
+        0.348,
+        0.933
+      ],
+      "exact_p": 0.015625
+    }
+  },
+  "Char n-gram + LogReg (unweighted)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 9,
+      "n_benign": 10,
+      "fpr": 0.9,
+      "recall": 1.0,
+      "ci_95": [
+        0.555,
+        0.997
+      ],
+      "exact_p": 0.00390625
+    },
+    "regional": {
+      "fp": 8,
+      "n_benign": 10,
+      "fpr": 0.8,
+      "recall": 1.0,
+      "ci_95": [
+        0.444,
+        0.975
+      ],
+      "exact_p": 0.0078125
+    },
+    "combined": {
+      "fp": 9,
+      "n_benign": 10,
+      "fpr": 0.9,
+      "recall": 1.0,
+      "ci_95": [
+        0.555,
+        0.997
+      ],
+      "exact_p": 0.00390625
+    }
+  },
+  "Char n-gram + LogReg (balanced)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 3,
+      "n_benign": 10,
+      "fpr": 0.3,
+      "recall": 1.0,
+      "ci_95": [
+        0.067,
+        0.652
+      ],
+      "exact_p": 0.25
+    },
+    "regional": {
+      "fp": 2,
+      "n_benign": 10,
+      "fpr": 0.2,
+      "recall": 1.0,
+      "ci_95": [
+        0.025,
+        0.556
+      ],
+      "exact_p": 0.5
+    },
+    "combined": {
+      "fp": 5,
+      "n_benign": 10,
+      "fpr": 0.5,
+      "recall": 1.0,
+      "ci_95": [
+        0.187,
+        0.813
+      ],
+      "exact_p": 0.0625
+    }
+  },
+  "Char n-gram + Ridge (unweighted)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 5,
+      "n_benign": 10,
+      "fpr": 0.5,
+      "recall": 1.0,
+      "ci_95": [
+        0.187,
+        0.813
+      ],
+      "exact_p": 0.0625
+    },
+    "regional": {
+      "fp": 3,
+      "n_benign": 10,
+      "fpr": 0.3,
+      "recall": 1.0,
+      "ci_95": [
+        0.067,
+        0.652
+      ],
+      "exact_p": 0.25
+    },
+    "combined": {
+      "fp": 8,
+      "n_benign": 10,
+      "fpr": 0.8,
+      "recall": 1.0,
+      "ci_95": [
+        0.444,
+        0.975
+      ],
+      "exact_p": 0.0078125
+    }
+  },
+  "Char n-gram + Ridge (balanced)": {
+    "baseline": {
+      "fp": 0,
+      "n_benign": 10,
+      "fpr": 0.0,
+      "recall": 1.0,
+      "ci_95": [
+        0.0,
+        0.308
+      ],
+      "exact_p": 1.0
+    },
+    "historical": {
+      "fp": 3,
+      "n_benign": 10,
+      "fpr": 0.3,
+      "recall": 1.0,
+      "ci_95": [
+        0.067,
+        0.652
+      ],
+      "exact_p": 0.25
+    },
+    "regional": {
+      "fp": 2,
+      "n_benign": 10,
+      "fpr": 0.2,
+      "recall": 1.0,
+      "ci_95": [
+        0.025,
+        0.556
+      ],
+      "exact_p": 0.5
+    },
+    "combined": {
+      "fp": 5,
+      "n_benign": 10,
+      "fpr": 0.5,
+      "recall": 1.0,
+      "ci_95": [
+        0.187,
+        0.813
+      ],
+      "exact_p": 0.0625
+    }
+  }
+}

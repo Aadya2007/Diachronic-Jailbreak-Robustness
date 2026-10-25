@@ -1,0 +1,314 @@
+{
+  "Word TF-IDF + Logistic Regression": {
+    "baseline": {
+      "auc": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 10,
+        "fp": 0,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 0.0,
+      "mcnemar_pval": 1.0,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.0,
+      "delta_fnr": 0.0
+    },
+    "historical": {
+      "auc": 1.0,
+      "f1": 0.75,
+      "precision": 0.6,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 8.1,
+      "mcnemar_pval": 0.0044,
+      "delta_auc": 0.0,
+      "delta_fpr": 1.0,
+      "delta_fnr": 0.0
+    },
+    "regional": {
+      "auc": 1.0,
+      "f1": 0.75,
+      "precision": 0.6,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 8.1,
+      "mcnemar_pval": 0.0044,
+      "delta_auc": 0.0,
+      "delta_fpr": 1.0,
+      "delta_fnr": 0.0
+    },
+    "combined": {
+      "auc": 0.9733,
+      "f1": 0.75,
+      "precision": 0.6,
+      "recall": 1.0,
+      "fpr": 1.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 10,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 8.1,
+      "mcnemar_pval": 0.0044,
+      "delta_auc": 0.0267,
+      "delta_fpr": 1.0,
+      "delta_fnr": 0.0
+    }
+  },
+  "Word TF-IDF + LinearSVC": {
+    "baseline": {
+      "auc": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 10,
+        "fp": 0,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 0.0,
+      "mcnemar_pval": 1.0,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.0,
+      "delta_fnr": 0.0
+    },
+    "historical": {
+      "auc": 1.0,
+      "f1": 0.8571,
+      "precision": 0.75,
+      "recall": 1.0,
+      "fpr": 0.5,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 5,
+        "fp": 5,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 3.2,
+      "mcnemar_pval": 0.0736,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.5,
+      "delta_fnr": 0.0
+    },
+    "regional": {
+      "auc": 1.0,
+      "f1": 0.9375,
+      "precision": 0.8824,
+      "recall": 1.0,
+      "fpr": 0.2,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 8,
+        "fp": 2,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 0.5,
+      "mcnemar_pval": 0.4795,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.2,
+      "delta_fnr": 0.0
+    },
+    "combined": {
+      "auc": 0.98,
+      "f1": 0.7895,
+      "precision": 0.6522,
+      "recall": 1.0,
+      "fpr": 0.8,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 2,
+        "fp": 8,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 6.125,
+      "mcnemar_pval": 0.0133,
+      "delta_auc": 0.02,
+      "delta_fpr": 0.8,
+      "delta_fnr": 0.0
+    }
+  },
+  "Subword Char N-gram + Logistic Regression": {
+    "baseline": {
+      "auc": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 10,
+        "fp": 0,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 0.0,
+      "mcnemar_pval": 1.0,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.0,
+      "delta_fnr": 0.0
+    },
+    "historical": {
+      "auc": 1.0,
+      "f1": 0.7692,
+      "precision": 0.625,
+      "recall": 1.0,
+      "fpr": 0.9,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 1,
+        "fp": 9,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 7.111,
+      "mcnemar_pval": 0.0077,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.9,
+      "delta_fnr": 0.0
+    },
+    "regional": {
+      "auc": 0.9867,
+      "f1": 0.7895,
+      "precision": 0.6522,
+      "recall": 1.0,
+      "fpr": 0.8,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 2,
+        "fp": 8,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 6.125,
+      "mcnemar_pval": 0.0133,
+      "delta_auc": 0.0133,
+      "delta_fpr": 0.8,
+      "delta_fnr": 0.0
+    },
+    "combined": {
+      "auc": 0.9733,
+      "f1": 0.7692,
+      "precision": 0.625,
+      "recall": 1.0,
+      "fpr": 0.9,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 1,
+        "fp": 9,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 7.111,
+      "mcnemar_pval": 0.0077,
+      "delta_auc": 0.0267,
+      "delta_fpr": 0.9,
+      "delta_fnr": 0.0
+    }
+  },
+  "Subword Char N-gram + Linear Margin": {
+    "baseline": {
+      "auc": 1.0,
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 10,
+        "fp": 0,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 0.0,
+      "mcnemar_pval": 1.0,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.0,
+      "delta_fnr": 0.0
+    },
+    "historical": {
+      "auc": 1.0,
+      "f1": 0.8571,
+      "precision": 0.75,
+      "recall": 1.0,
+      "fpr": 0.5,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 5,
+        "fp": 5,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 3.2,
+      "mcnemar_pval": 0.0736,
+      "delta_auc": 0.0,
+      "delta_fpr": 0.5,
+      "delta_fnr": 0.0
+    },
+    "regional": {
+      "auc": 0.9867,
+      "f1": 0.9091,
+      "precision": 0.8333,
+      "recall": 1.0,
+      "fpr": 0.3,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 7,
+        "fp": 3,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 1.333,
+      "mcnemar_pval": 0.2482,
+      "delta_auc": 0.0133,
+      "delta_fpr": 0.3,
+      "delta_fnr": 0.0
+    },
+    "combined": {
+      "auc": 0.9733,
+      "f1": 0.7895,
+      "precision": 0.6522,
+      "recall": 1.0,
+      "fpr": 0.8,
+      "fnr": 0.0,
+      "confusion_matrix": {
+        "tn": 2,
+        "fp": 8,
+        "fn": 0,
+        "tp": 15
+      },
+      "mcnemar_stat": 6.125,
+      "mcnemar_pval": 0.0133,
+      "delta_auc": 0.0267,
+      "delta_fpr": 0.8,
+      "delta_fnr": 0.0
+    }
+  }
+}

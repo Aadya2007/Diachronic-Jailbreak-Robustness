@@ -1,0 +1,350 @@
+{
+  "Word TF-IDF + Logistic Regression": {
+    "C1_baseline": {
+      "auc": 0.93,
+      "f1": 0.875,
+      "precision": 0.913,
+      "recall": 0.84,
+      "fpr": 0.08,
+      "fnr": 0.16,
+      "tp": 84,
+      "fp": 8,
+      "tn": 92,
+      "fn": 16,
+      "fpr_ci": [
+        0.0352,
+        0.1516
+      ],
+      "mcnemar_p": 1.0
+    },
+    "C0_neutral": {
+      "auc": 0.8772,
+      "f1": 0.8065,
+      "precision": 0.8721,
+      "recall": 0.75,
+      "fpr": 0.11,
+      "fnr": 0.25,
+      "tp": 75,
+      "fp": 11,
+      "tn": 89,
+      "fn": 25,
+      "fpr_ci": [
+        0.0562,
+        0.1883
+      ],
+      "mcnemar_p": 0.007538
+    },
+    "C2_historical": {
+      "auc": 0.9031,
+      "f1": 0.7515,
+      "precision": 0.9538,
+      "recall": 0.62,
+      "fpr": 0.03,
+      "fnr": 0.38,
+      "tp": 62,
+      "fp": 3,
+      "tn": 97,
+      "fn": 38,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.001514
+    },
+    "C3_regional": {
+      "auc": 0.9081,
+      "f1": 0.8485,
+      "precision": 0.8571,
+      "recall": 0.84,
+      "fpr": 0.14,
+      "fnr": 0.16,
+      "tp": 84,
+      "fp": 14,
+      "tn": 86,
+      "fn": 16,
+      "fpr_ci": [
+        0.0787,
+        0.2237
+      ],
+      "mcnemar_p": 0.263176
+    },
+    "C4_combined": {
+      "auc": 0.909,
+      "f1": 0.7439,
+      "precision": 0.9531,
+      "recall": 0.61,
+      "fpr": 0.03,
+      "fnr": 0.39,
+      "tp": 61,
+      "fp": 3,
+      "tn": 97,
+      "fn": 39,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.001431
+    }
+  },
+  "Word TF-IDF + LinearSVC": {
+    "C1_baseline": {
+      "auc": 0.9441,
+      "f1": 0.8632,
+      "precision": 0.9111,
+      "recall": 0.82,
+      "fpr": 0.08,
+      "fnr": 0.18,
+      "tp": 82,
+      "fp": 8,
+      "tn": 92,
+      "fn": 18,
+      "fpr_ci": [
+        0.0352,
+        0.1516
+      ],
+      "mcnemar_p": 1.0
+    },
+    "C0_neutral": {
+      "auc": 0.8915,
+      "f1": 0.8168,
+      "precision": 0.8571,
+      "recall": 0.78,
+      "fpr": 0.13,
+      "fnr": 0.22,
+      "tp": 78,
+      "fp": 13,
+      "tn": 87,
+      "fn": 22,
+      "fpr_ci": [
+        0.0711,
+        0.212
+      ],
+      "mcnemar_p": 0.09314
+    },
+    "C2_historical": {
+      "auc": 0.9107,
+      "f1": 0.7515,
+      "precision": 0.9538,
+      "recall": 0.62,
+      "fpr": 0.03,
+      "fnr": 0.38,
+      "tp": 62,
+      "fp": 3,
+      "tn": 97,
+      "fn": 38,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.004077
+    },
+    "C3_regional": {
+      "auc": 0.9125,
+      "f1": 0.8342,
+      "precision": 0.8384,
+      "recall": 0.83,
+      "fpr": 0.16,
+      "fnr": 0.17,
+      "tp": 83,
+      "fp": 16,
+      "tn": 84,
+      "fn": 17,
+      "fpr_ci": [
+        0.0943,
+        0.2468
+      ],
+      "mcnemar_p": 0.118469
+    },
+    "C4_combined": {
+      "auc": 0.905,
+      "f1": 0.6883,
+      "precision": 0.9815,
+      "recall": 0.53,
+      "fpr": 0.01,
+      "fnr": 0.47,
+      "tp": 53,
+      "fp": 1,
+      "tn": 99,
+      "fn": 47,
+      "fpr_ci": [
+        0.0003,
+        0.0545
+      ],
+      "mcnemar_p": 0.000472
+    }
+  },
+  "Subword Char N-gram + Logistic Regression": {
+    "C1_baseline": {
+      "auc": 0.9531,
+      "f1": 0.8877,
+      "precision": 0.954,
+      "recall": 0.83,
+      "fpr": 0.04,
+      "fnr": 0.17,
+      "tp": 83,
+      "fp": 4,
+      "tn": 96,
+      "fn": 17,
+      "fpr_ci": [
+        0.011,
+        0.0993
+      ],
+      "mcnemar_p": 1.0
+    },
+    "C0_neutral": {
+      "auc": 0.9371,
+      "f1": 0.8641,
+      "precision": 0.8396,
+      "recall": 0.89,
+      "fpr": 0.17,
+      "fnr": 0.11,
+      "tp": 89,
+      "fp": 17,
+      "tn": 83,
+      "fn": 11,
+      "fpr_ci": [
+        0.1023,
+        0.2582
+      ],
+      "mcnemar_p": 0.21004
+    },
+    "C2_historical": {
+      "auc": 0.9212,
+      "f1": 0.8092,
+      "precision": 0.9589,
+      "recall": 0.7,
+      "fpr": 0.03,
+      "fnr": 0.3,
+      "tp": 70,
+      "fp": 3,
+      "tn": 97,
+      "fn": 30,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.007538
+    },
+    "C3_regional": {
+      "auc": 0.9421,
+      "f1": 0.8427,
+      "precision": 0.9615,
+      "recall": 0.75,
+      "fpr": 0.03,
+      "fnr": 0.25,
+      "tp": 75,
+      "fp": 3,
+      "tn": 97,
+      "fn": 25,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.143463
+    },
+    "C4_combined": {
+      "auc": 0.9334,
+      "f1": 0.7683,
+      "precision": 0.9844,
+      "recall": 0.63,
+      "fpr": 0.01,
+      "fnr": 0.37,
+      "tp": 63,
+      "fp": 1,
+      "tn": 99,
+      "fn": 37,
+      "fpr_ci": [
+        0.0003,
+        0.0545
+      ],
+      "mcnemar_p": 0.000911
+    }
+  },
+  "Subword Char N-gram + Ridge Margin": {
+    "C1_baseline": {
+      "auc": 0.9561,
+      "f1": 0.8877,
+      "precision": 0.954,
+      "recall": 0.83,
+      "fpr": 0.04,
+      "fnr": 0.17,
+      "tp": 83,
+      "fp": 4,
+      "tn": 96,
+      "fn": 17,
+      "fpr_ci": [
+        0.011,
+        0.0993
+      ],
+      "mcnemar_p": 1.0
+    },
+    "C0_neutral": {
+      "auc": 0.9304,
+      "f1": 0.8426,
+      "precision": 0.7845,
+      "recall": 0.91,
+      "fpr": 0.25,
+      "fnr": 0.09,
+      "tp": 91,
+      "fp": 25,
+      "tn": 75,
+      "fn": 9,
+      "fpr_ci": [
+        0.1688,
+        0.3466
+      ],
+      "mcnemar_p": 0.035082
+    },
+    "C2_historical": {
+      "auc": 0.9331,
+      "f1": 0.8161,
+      "precision": 0.9595,
+      "recall": 0.71,
+      "fpr": 0.03,
+      "fnr": 0.29,
+      "tp": 71,
+      "fp": 3,
+      "tn": 97,
+      "fn": 29,
+      "fpr_ci": [
+        0.0062,
+        0.0852
+      ],
+      "mcnemar_p": 0.012726
+    },
+    "C3_regional": {
+      "auc": 0.942,
+      "f1": 0.8588,
+      "precision": 0.987,
+      "recall": 0.76,
+      "fpr": 0.01,
+      "fnr": 0.24,
+      "tp": 76,
+      "fp": 1,
+      "tn": 99,
+      "fn": 24,
+      "fpr_ci": [
+        0.0003,
+        0.0545
+      ],
+      "mcnemar_p": 0.387695
+    },
+    "C4_combined": {
+      "auc": 0.9202,
+      "f1": 0.7296,
+      "precision": 0.9831,
+      "recall": 0.58,
+      "fpr": 0.01,
+      "fnr": 0.42,
+      "tp": 58,
+      "fp": 1,
+      "tn": 99,
+      "fn": 42,
+      "fpr_ci": [
+        0.0003,
+        0.0545
+      ],
+      "mcnemar_p": 5.9e-05
+    }
+  }
+}

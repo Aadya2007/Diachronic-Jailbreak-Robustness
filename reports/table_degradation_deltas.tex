@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llccc}
+\toprule
+\textbf{Detector Model} & \textbf{Shift Type} & $\Delta$\textbf{AU-ROC} $\downarrow$ & $\Delta$\textbf{FPR (False Alarms)} $\uparrow$ & $\Delta$\textbf{FNR (Evasions)} $\uparrow$ \\
+\midrule
+Word TF-IDF + Logistic Regression & Diachronic (Historical) & +0.000 & +1.000 & +0.000 \\
+Word TF-IDF + Logistic Regression & Socio-Regional (Dialectal) & +0.000 & +1.000 & +0.000 \\
+Word TF-IDF + Logistic Regression & Combined (Hist + Reg) & +0.027 & +1.000 & +0.000 \\
+\midrule
+Word TF-IDF + LinearSVC & Diachronic (Historical) & +0.000 & +0.500 & +0.000 \\
+Word TF-IDF + LinearSVC & Socio-Regional (Dialectal) & +0.000 & +0.200 & +0.000 \\
+Word TF-IDF + LinearSVC & Combined (Hist + Reg) & +0.020 & +0.800 & +0.000 \\
+\midrule
+Subword Char N-gram + Logistic Regression & Diachronic (Historical) & +0.000 & +0.900 & +0.000 \\
+Subword Char N-gram + Logistic Regression & Socio-Regional (Dialectal) & +0.013 & +0.800 & +0.000 \\
+Subword Char N-gram + Logistic Regression & Combined (Hist + Reg) & +0.027 & +0.900 & +0.000 \\
+\midrule
+Subword Char N-gram + Linear Margin & Diachronic (Historical) & +0.000 & +0.500 & +0.000 \\
+Subword Char N-gram + Linear Margin & Socio-Regional (Dialectal) & +0.013 & +0.300 & +0.000 \\
+Subword Char N-gram + Linear Margin & Combined (Hist + Reg) & +0.027 & +0.800 & +0.000 \\
+\bottomrule
+\end{tabular}
+\caption{Performance degradation deltas relative to contemporary baseline. Positive $\Delta$FPR indicates increased false alarms on benign prompts; positive $\Delta$FNR indicates increased adversarial evasion.}
+\label{tab:degradation_deltas}
+\end{table}

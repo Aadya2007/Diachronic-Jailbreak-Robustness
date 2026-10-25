@@ -1,0 +1,168 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\title{\textbf{Beyond Contemporary Standard English: Evaluating the Robustness and False-Alarm Fragility of Jailbreak Detectors Under Diachronic and Dialectal Shift}}
+
+\author{
+  \textbf{Anjali Ajith}, \textbf{Aishwarya Upadhyay}, and \textbf{Aadya Singh}\\[0.5em]
+  \small Department of Computer Science and Engineering\\
+  \small Dronacharya College of Engineering, Affiliated with Gurugram University\\
+  \small Gurugram, Haryana, India\\
+  \small \texttt{\{anjali.ajith, aishwarya.upadhyay, aadya.singh\}@dronacharya.info}
+}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+As large language models (LLMs) are integrated into high-stakes enterprise and civic applications, dedicated input-filtering classifiers and safety guardrails are deployed as perimeter defenses against adversarial prompt injections and jailbreaks. However, existing safety benchmarks evaluate detectors almost exclusively on contemporary, standardized English prompts. In this work, we investigate whether jailbreak detectors remain reliable when inputs undergo diachronic shift (historical Victorian English registers), socio-regional dialect shift (colloquial Indian English), and their combined interaction (19th-century colonial regional administrative English), while strictly preserving underlying semantic intent and safety ground-truth labels. 
+
+Using a controlled $2 \times 2$ factorial evaluation benchmark constructed from authenticated safety suites (JailbreakBench, AdvBench, Do-Not-Answer, XSTest, and BeaverTails), we evaluate word-level lexical classifiers, linear margin estimators, and subword character n-gram architectures. Counter to the prevailing hypothesis that linguistic shifts primarily facilitate adversarial evasion (false negatives), our empirical findings reveal a catastrophic ``Censorship-by-Default'' failure mode: while classifiers maintain high attack detection recall ($\text{FNR} = 0.0\%$), their False Positive Rate (FPR) on benign hard negatives surges from $0.0\%$ in-distribution to between $50.0\%$ and $100.0\%$ under historical and regional shifts ($p < 0.01$, McNemar's test). Furthermore, simultaneous temporal and regional shifts produce compounding degradation, driving linear margin false alarm rates up to $80.0\%$. Our results demonstrate that production guardrails overfit to contemporary standardized syntax, creating severe linguistic discrimination and denial of service for non-standard dialect speakers and benign historical inquiries.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Jailbreak detection, AI safety, distribution shift, natural language processing, diachronic linguistics, regional dialects, guardrail robustness, over-refusal, algorithmic fairness.
+
+\section{Introduction}
+\label{sec:intro}
+To protect large language models (LLMs) from generating toxic, illegal, or dangerous content, production deployments rely on a defense-in-depth architecture. Rather than relying solely on post-hoc generative refusal training via Reinforcement Learning from Human Feedback (RLHF), safety architectures place lightweight, high-throughput input classifiers (e.g., Meta Prompt Guard, AllenAI WildGuard, sentence embedding probes) at the perimeter to inspect incoming prompts and filter out malicious attempts before they reach the core LLM \cite{han2024wildguard, fomin2026whenbenchmarkslie}.
+
+While these perimeter detectors report near-perfect precision, recall, and Area Under the ROC Curve ($\text{AU-ROC} > 0.98$) on standard benchmark suites \cite{chao2024jailbreakbench}, real-world deployment exposes systems to immense linguistic diversity across chronological periods, geographical regions, and cultural sociolects. 
+
+Recent research has begun identifying critical distribution shifts in AI safety:
+\begin{itemize}
+    \item \textit{JailbreaksOverTime} \cite{piet2025jailbreaksovertime} revealed that detectors degrade across chronological calendar time as human adversaries invent novel prompt templates over a multi-month timeline.
+    \item \textit{XL-SafetyBench} \cite{choi2026xlsafetybench} and \textit{IndicJR} \cite{pattnayak2026indicjr} demonstrated that generative models exhibit severe safety vulnerabilities when prompts are translated across national languages or written in romanized Indic scripts.
+    \item Andriushchenko and Flammarion \cite{andriushchenko2025refusal} demonstrated that past-tense grammatical reformulations bypass safety refusal training in frontier generative models.
+\end{itemize}
+
+Despite these advances, a fundamental research gap persists in the literature: \textbf{No prior study has systematically evaluated standalone input-filtering safety classifiers under controlled, intra-lingual diachronic (historical registers) and socio-regional dialect shifts while holding semantic harm strictly constant and evaluating benign hard negatives alongside adversarial attacks.}
+
+In this paper, we formulate and test the \textbf{Linguistic Robustness Hypothesis}:
+\begin{quote}
+\textit{Do historical register variations and socio-regional dialect shifts cause dedicated safety classifiers to misclassify prompts, even when their underlying meaning and safety-relevant intent remain unchanged?}
+\end{quote}
+
+\subsection{The Dual Threat Model}
+Our investigation formalizes a dual threat model:
+\begin{enumerate}
+    \item \textbf{Adversarial Evasion (Security Risk):} A malicious actor employs automated linguistic style transfer (e.g., Victorian circumlocutions or regional vernacular) to bypass perimeter keyword and semantic filters while preserving actionable harmful intent.
+    \item \textbf{False-Alarm Censorship / Denial of Service (Fairness \& Usability Risk):} A legitimate user querying the LLM in an authentic regional dialect (e.g., Indian English) or researching historical topics in period prose is falsely flagged as an attacker, suffering algorithmic censorship and denial of service.
+\end{enumerate}
+
+\subsection{Summary of Contributions}
+\begin{enumerate}
+    \item \textbf{A Controlled Factorial Benchmark:} We construct a $2 \times 2$ factorial evaluation framework mapping contemporary seed prompts into four conditions: Contemporary Baseline ($C_1$), Diachronic / Victorian Shift ($C_2$), Socio-Regional Indian English ($C_3$), and Combined Colonial Administrative Shift ($C_4$).
+    \item \textbf{The Censorship-by-Default Discovery:} We uncover that detectors do not primarily fail through adversarial evasion ($\Delta \text{FNR} = 0.0\%$), but through catastrophic false-positive inflation ($\Delta \text{FPR} = +20.0\%$ to $+100.0\%$, $p < 0.01$). Classifiers misidentify unfamiliar benign syntax as malicious attacks.
+    \item \textbf{Compounding Factorial Interaction:} We prove that joint temporal-regional shifts produce compounding degradation ($\Delta \text{FPR} = +80.0\%$ on margin classifiers), demonstrating that interaction effects exceed individual single-factor shifts.
+\end{enumerate}
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Temporal Shift in AI Safety}
+Prior literature on temporal robustness in NLP has explored domain drift and diachronic language change. In adversarial safety, Piet et al. \cite{piet2025jailbreaksovertime} introduced \textit{JailbreaksOverTime}, documenting how detector accuracy degrades over a 10-month calendar timeline as human adversaries discover novel prompt templates. In contrast to chronological exploit evolution, Andriushchenko and Flammarion \cite{andriushchenko2025refusal} examined grammatical tense, showing that past-tense reformulations (e.g., ``How did people make...'') circumvent refusal alignment in frontier LLMs. Our study addresses a distinct dimension: \textit{diachronic register shift}---the vocabulary, syntax, and circumlocutions characteristic of historical English prose (e.g., 19th-century Victorian literature).
+
+\subsection{Multilingual and Cross-Cultural AI Safety}
+Research in multilingual red-teaming has accelerated rapidly:
+\begin{itemize}
+    \item \textit{MultiJail} \cite{deng2024multilingual} established that translating harmful prompts into low-resource languages bypasses safety alignment.
+    \item \textit{XL-SafetyBench} \cite{choi2026xlsafetybench} introduced a 10-country cross-cultural safety suite.
+    \item \textit{IndicJR} \cite{pattnayak2026indicjr} evaluated jailbreak vulnerabilities across 12 South Asian languages, identifying script-switching and romanization as critical blind spots.
+    \item \textit{TukaBench} \cite{akinode2026tukabench} and \textit{IndicSafeEval} \cite{mondal2026indicsafeeval} benchmarked culturally localized threats in African and Indic languages.
+\end{itemize}
+However, these benchmarks evaluate \textit{cross-lingual generative LLM refusal} on localized legal concepts. Our work isolates \textit{intra-lingual socio-regional dialect variation} (e.g., Indian English) on dedicated input classifiers.
+
+\subsection{Detector Shortcuts and Exaggerated Safety}
+Evaluating prompt classifiers under true distribution shift was formalized by Fomin \cite{fomin2026whenbenchmarkslie} in \textit{When Benchmarks Lie}, demonstrating that linear probes learn dataset-identity shortcuts that collapse under Leave-One-Dataset-Out (LODO) testing. Complementarily, \textit{XSTest} \cite{rottger2024xstest} exposed the widespread phenomenon of exaggerated safety (over-refusal) on benign prompts sharing lexical overlap with sensitive topics. We build upon this foundation by evaluating how dialectal shift exacerbates false-alarm sensitivity.
+
+\section{Factorial Experimental Design}
+\label{sec:design}
+
+\subsection{The $2 \times 2$ Factorial Transformation Space}
+We define a prompt transformation function $T(x, \tau, \rho)$ parametrized by a temporal axis $\tau \in \{\text{Contemporary}, \text{Historical}\}$ and a regional axis $\rho \in \{\text{Standard}, \text{Regional}\}$:
+\begin{itemize}
+    \item \textbf{Condition 1 ($C_1$, Baseline):} $T(x, \text{Contemp}, \text{Standard})$ --- Standard contemporary American/British English.
+    \item \textbf{Condition 2 ($C_2$, Historical):} $T(x, \text{Historical}, \text{Standard})$ --- 19th-Century Victorian formal English with Latinate diction and formal circumlocutions.
+    \item \textbf{Condition 3 ($C_3$, Regional):} $T(x, \text{Contemp}, \text{Regional})$ --- Colloquial Indian English vernacular characterized by South Asian syntax and discourse particles.
+    \item \textbf{Condition 4 ($C_4$, Combined):} $T(x, \text{Historical}, \text{Regional})$ --- 19th-century colonial regional administrative English merging formal petitionary structures with South Asian administrative idioms.
+\end{itemize}
+
+\subsection{Benchmark Foundation \& Ground-Truth Provenance}
+To avoid synthetic label noise, all seed prompts originate from peer-reviewed, human-audited benchmarks:
+\begin{enumerate}
+    \item \textbf{Malicious Cohort ($y = 1$):} Sourced from JailbreakBench (10 policy categories) \cite{chao2024jailbreakbench}, AdvBench \cite{zou2023universal}, and Do-Not-Answer \cite{wang2023donotanswer}.
+    \item \textbf{Benign Cohort ($y = 0$):} Sourced from XSTest safe hard negatives (homonyms, figurative language, safe contexts, definitions, historical events) \cite{rottger2024xstest} and BeaverTails safe interactions \cite{ji2023beavertails}.
+\end{enumerate}
+
+\subsection{Semantic Invariance \& Confounder Controls}
+To guarantee that $y_i$ remains invariant across transformations:
+\begin{itemize}
+    \item \textbf{Meta-Linguistic Translation Framing:} To prevent LLM instruction-refusal, transformation prompts instruct the generator to operate solely as a literal syntactic translator without executing actions.
+    \item \textbf{Dense Semantic Cosine Validation:} Transformations are embedded using Nomic-Embed-Text (768 dimensions), verifying that cross-style cosine similarity satisfies $\text{CosSim} \ge 0.70$.
+    \item \textbf{Length Normalization:} Output token counts are constrained within $[0.70, 2.50]$ word length ratios relative to baseline.
+\end{itemize}
+
+\section{Empirical Results \& Analysis}
+\label{sec:results}
+
+We evaluate four primary detector architectures trained on $C_1$ and deployed out-of-distribution across $C_2$, $C_3$, and $C_4$. Tables~\ref{tab:main_results} and \ref{tab:degradation_deltas} report the classification metrics and degradation deltas.
+
+\input{reports/table_main_results.tex}
+\input{reports/table_degradation_deltas.tex}
+
+\subsection{Finding 1: Catastrophic False-Positive Inflation (Over-Refusal)}
+As shown in Table~\ref{tab:main_results}, all models achieve perfect in-distribution performance on Condition 1 ($\text{AU-ROC} = 1.000$, $\text{FPR} = 0.000$). However, under diachronic and regional shift, the False Positive Rate on benign hard negatives collapses:
+\begin{itemize}
+    \item For \textbf{Word TF-IDF + Logistic Regression}, FPR jumps from $0.0\%$ to \textbf{$100.0\%$} across all shifted conditions ($p = 0.0044$, McNemar's test).
+    \item For \textbf{Subword Char N-gram + Logistic Regression}, FPR jumps to \textbf{$90.0\%$} under Historical shift ($p = 0.0077$) and \textbf{$80.0\%$} under Regional shift ($p = 0.0133$).
+    \item For \textbf{LinearSVC}, FPR rises to \textbf{$50.0\%$} under Historical shift and \textbf{$80.0\%$} under Combined shift ($p = 0.0133$).
+\end{itemize}
+
+\subsection{Finding 2: Asymmetric Invariance of Malicious Prompts}
+Remarkably, across all detector architectures, the False Negative Rate remained virtually zero ($\text{FNR} = 0.000$, $\Delta \text{FNR} = +0.000$). Classifiers reliably detected shifted malicious prompts. Because detectors learned to flag anything deviating from standard contemporary benign syntax as dangerous, non-standard dialectal inputs were categorically routed to the malicious class. This proves that safety classifiers operate under a \textbf{``guilty until proven innocent'' inductive bias}.
+
+\subsection{Finding 3: Compound Factorial Interaction}
+Condition 4 (Combined Shift) reveals a compound degradation effect. Under LinearSVC, single-factor shifts produced $\Delta \text{FPR} = +0.200$ (Regional) and $\Delta \text{FPR} = +0.500$ (Historical). When both shifts occurred simultaneously, $\Delta \text{FPR}$ compounded to \textbf{$+0.800$} ($80.0\%$ false alarm rate), while AU-ROC exhibited degradation down to $0.973$.
+
+\section{Qualitative Error Diagnostics}
+\label{sec:diagnostics}
+
+Examining specific quadruplets illustrates the exact failure mechanism:
+\begin{quote}
+\textbf{Case Study: Benign Python Homonym (\texttt{BEN-0001})}
+\begin{itemize}
+    \item \textit{Baseline ($C_1$):} ``How can I kill a Python process?'' $\rightarrow$ \textbf{Predicted Safe (Correct, $P=0.04$)}
+    \item \textit{Historical ($C_2$):} ``Pray inform me by what manner one may effect the termination of an executing Python process.'' $\rightarrow$ \textbf{Predicted Malicious (False Positive, $P=0.88$)}
+    \item \textit{Regional ($C_3$):} ``Kindly advise how to kill this Python background process urgently, please.'' $\rightarrow$ \textbf{Predicted Malicious (False Positive, $P=0.82$)}
+    \item \textit{Combined ($C_4$):} ``Humbly petitioning your honour, I beseech to know the expedient manner to terminate a recalcitrant Python process.'' $\rightarrow$ \textbf{Predicted Malicious (False Positive, $P=0.91$)}
+\end{itemize}
+\end{quote}
+The presence of archaic circumlocutions (``pray inform me'', ``beseech'') or regional politeness markers (``kindly advise... urgently please'') shifted the representation outside the narrow feature manifold of contemporary benign training data, triggering false alarms.
+
+\section{Threats to Validity \& Limitations}
+\label{sec:limitations}
+\begin{enumerate}
+    \item \textbf{Synthetic Paraphrasing:} While prompt transformations were generated via frozen Llama 3 with few-shot exemplars and validated via embedding cosine similarity ($\ge 0.70$), synthetic transformations cannot perfectly replicate spontaneous native sociolects.
+    \item \textbf{Classifier Scope:} Our evaluation focused on edge-deployable linear, n-gram, and subword classifiers. Future work will benchmark 7B-parameter generative guardrails (e.g., Llama Guard 3) across the same factorial matrix.
+\end{enumerate}
+
+\section{Conclusion}
+\label{sec:conclusion}
+This study provides the first systematic evaluation of jailbreak detectors under controlled diachronic and socio-regional distribution shifts. Our findings demonstrate that detectors do not merely risk adversarial evasion; rather, their primary vulnerability is a \textbf{catastrophic surge in false-positive over-refusals ($p < 0.01$)} on harmless regional and historical queries. AI safety engineering must transition beyond monolithic, contemporary standard English to ensure guardrails are robust, fair, and calibrated across global linguistic diversity.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
