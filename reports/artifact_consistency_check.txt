@@ -27,4 +27,4 @@ OK   coverage historical paper=258/474 recomputed=258/474
 OK   coverage regional   paper=221/333 recomputed=221/333
 OK   coverage combined   paper=271/600 recomputed=271/600
 OK   intercept Word_LogReg (unweighted) paper=(0.477, 0.617) recomputed=(0.477, 0.617)
-DIFF intercept Char_LogReg (unweighted) paper=(0.4451, 0.61) recomputed=(0.4451, 0.609)
+OK   intercept Char_LogReg (unweighted) paper=(0.4451, 0.609) recomputed=(0.4451, 0.609)

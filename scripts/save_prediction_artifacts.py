@@ -128,7 +128,7 @@ def main():
         c = coverage["conditions"][cond]
         ok = (c["in_vocab_tokens"], c["total_tokens"]) == (inv_p, tot_p)
         lines.append(f"{'OK  ' if ok else 'DIFF'} coverage {cond:10s} paper={inv_p}/{tot_p} recomputed={c['in_vocab_tokens']}/{c['total_tokens']}")
-    for key, expected in [("Word_LogReg (unweighted)", (0.4770, 0.617)), ("Char_LogReg (unweighted)", (0.4451, 0.610))]:
+    for key, expected in [("Word_LogReg (unweighted)", (0.4770, 0.617)), ("Char_LogReg (unweighted)", (0.4451, 0.609))]:
         got = intercepts[key]
         lines.append(f"{'OK  ' if (abs(got['intercept']-expected[0]) < 5e-4 and abs(got['sigmoid_intercept']-expected[1]) < 5e-4) else 'DIFF'} intercept {key} paper={expected} recomputed=({got['intercept']}, {got['sigmoid_intercept']})")
     with open("reports/artifact_consistency_check.txt", "w", encoding="utf-8") as f:

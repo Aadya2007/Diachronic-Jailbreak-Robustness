@@ -84,7 +84,7 @@ def make_fig1_pdf():
 
     # Bottom notes
     draw_text(draw, (190, 570), "Labels fixed: y \u2208 {0, 1}", (40, 40, 40), 32)
-    draw_text(draw, (190, 612), "Cos-sim \u2265 0.70; length ratio in [0.70, 2.50]", (40, 40, 40), 32)
+    draw_text(draw, (190, 612), "Targets: cos-sim \u2265 0.70, length ratio [0.70, 2.50]", (40, 40, 40), 32)
     draw_text(draw, (190, 654), "Interaction: FPR(C4) \u2212 FPR(C2) \u2212 FPR(C3) + FPR(C1)", (60, 60, 60), 30)
 
     for d in ['paper', 'paper/overleaf_package']:
