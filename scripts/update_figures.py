@@ -23,75 +23,74 @@ def get_font(size, bold=False):
     except:
         return ImageFont.load_default()
 
+FONT_SYMBOL = 'C:/Windows/Fonts/seguisym.ttf'
+SYMBOL_CHARS = set('\u2208\u2265\u2212')
+
+def draw_text(draw, xy, text, fill, size, bold=False):
+    """Draw text, using Segoe UI Symbol for math glyphs the base font may lack."""
+    x, y = xy
+    base = get_font(size, bold)
+    try:
+        sym = ImageFont.truetype(FONT_SYMBOL, size)
+    except Exception:
+        sym = base
+    run, run_sym = '', None
+    def flush():
+        nonlocal x, run
+        if run:
+            f = sym if run_sym else base
+            draw.text((x, y), run, fill=fill, font=f)
+            x += draw.textlength(run, font=f)
+            run = ''
+    for ch in text:
+        is_sym = ch in SYMBOL_CHARS
+        if run and is_sym != run_sym:
+            flush()
+        run_sym = is_sym
+        run += ch
+    flush()
+
 def make_fig1_pdf():
-    # Compact canvas 1100 x 740 with large, bold text for IEEE column scaling
-    w, h = 1100, 740
+    # 1100 x 700 canvas; text is kept short so fonts can be large when scaled to one IEEE column
+    w, h = 1100, 700
     img = Image.new('RGB', (w, h), (255, 255, 255))
     draw = ImageDraw.Draw(img)
-    
-    f_axis_main = get_font(34, bold=True)
-    f_axis_sub = get_font(30, bold=True)
-    f_box_title = get_font(30, bold=True)
-    f_box_head = get_font(26, bold=True)
-    f_box_desc = get_font(24, bold=False)
-    f_box_sub = get_font(22, bold=False)
-    f_note = get_font(23, bold=False)
-    
-    # Regional axis header (Top)
-    draw.text((410, 15), "Regional Axis (\u03c1)", fill=(0, 0, 0), font=f_axis_main)
-    draw.text((230, 62), "Standard English", fill=(0, 51, 102), font=f_axis_sub)
-    draw.text((680, 62), "Indian English", fill=(0, 51, 102), font=f_axis_sub)
-    
-    # Temporal axis header (Left)
-    draw.text((15, 220), "Temporal\nAxis (\u03c4)", fill=(0, 0, 0), font=f_axis_main)
-    draw.text((20, 375), "Contemp.", fill=(0, 51, 102), font=f_axis_sub)
-    draw.text((20, 545), "Historical", fill=(0, 51, 102), font=f_axis_sub)
-    
-    # 2x2 Boxes
-    box_w, box_h = 430, 235
-    x1, y1 = 190, 115
-    x2, y2 = 645, 115
-    row2_y = 380
-    
-    # C1 (Baseline)
-    draw.rectangle([x1, y1, x1 + box_w, y1 + box_h], outline=(0, 0, 0), width=3, fill=(245, 248, 254))
-    draw.text((x1 + 20, y1 + 18), "C1: Baseline", fill=(0, 51, 102), font=f_box_title)
-    draw.text((x1 + 20, y1 + 65), "Contemporary Standard", fill=(0, 0, 0), font=f_box_head)
-    draw.text((x1 + 20, y1 + 108), "In-distribution training & eval", fill=(50, 50, 50), font=f_box_desc)
-    draw.text((x1 + 20, y1 + 148), "Reference for paired McNemar", fill=(70, 70, 70), font=f_box_desc)
-    draw.text((x1 + 20, y1 + 190), "(\u03c4 = Contemp., \u03c1 = Std.)", fill=(100, 100, 100), font=f_box_sub)
-    
-    # C3 (Indian English)
-    draw.rectangle([x2, y1, x2 + box_w, y1 + box_h], outline=(0, 0, 0), width=3, fill=(245, 248, 254))
-    draw.text((x2 + 20, y1 + 18), "C3: Regional Shift", fill=(0, 51, 102), font=f_box_title)
-    draw.text((x2 + 20, y1 + 65), "Colloquial Indian English", fill=(0, 0, 0), font=f_box_head)
-    draw.text((x2 + 20, y1 + 108), "Regional syntax & discourse", fill=(50, 50, 50), font=f_box_desc)
-    draw.text((x2 + 20, y1 + 148), "66.4% in-vocab token coverage", fill=(70, 70, 70), font=f_box_desc)
-    draw.text((x2 + 20, y1 + 190), "(\u03c4 = Contemp., \u03c1 = Reg.)", fill=(100, 100, 100), font=f_box_sub)
-    
-    # C2 (Victorian)
-    draw.rectangle([x1, row2_y, x1 + box_w, row2_y + box_h], outline=(0, 0, 0), width=3, fill=(245, 248, 254))
-    draw.text((x1 + 20, row2_y + 18), "C2: Diachronic Shift", fill=(0, 51, 102), font=f_box_title)
-    draw.text((x1 + 20, row2_y + 65), "Victorian Formal Register", fill=(0, 0, 0), font=f_box_head)
-    draw.text((x1 + 20, row2_y + 108), "19th-century archaic syntax", fill=(50, 50, 50), font=f_box_desc)
-    draw.text((x1 + 20, row2_y + 148), "54.4% in-vocab token coverage", fill=(70, 70, 70), font=f_box_desc)
-    draw.text((x1 + 20, row2_y + 190), "(\u03c4 = Hist., \u03c1 = Std.)", fill=(100, 100, 100), font=f_box_sub)
-    
-    # C4 (Combined)
-    draw.rectangle([x2, row2_y, x2 + box_w, row2_y + box_h], outline=(0, 0, 0), width=3, fill=(245, 248, 254))
-    draw.text((x2 + 20, row2_y + 18), "C4: Dual Combined Shift", fill=(0, 51, 102), font=f_box_title)
-    draw.text((x2 + 20, row2_y + 65), "Colonial Administrative", fill=(0, 0, 0), font=f_box_head)
-    draw.text((x2 + 20, row2_y + 108), "Joint diachronic & regional", fill=(50, 50, 50), font=f_box_desc)
-    draw.text((x2 + 20, row2_y + 148), "45.2% in-vocab token coverage", fill=(70, 70, 70), font=f_box_desc)
-    draw.text((x2 + 20, row2_y + 190), "(\u03c4 = Hist., \u03c1 = Reg.)", fill=(100, 100, 100), font=f_box_sub)
-    
-    # Bottom control notes
-    draw.text((190, 645), "Fixed labels y \u2208 {0, 1}; Controls: Cos-Sim \u2265 0.70, Length Ratio [0.70, 2.50]", fill=(40, 40, 40), font=f_note)
-    draw.text((190, 680), "Interaction contrast: FPR(C4) - FPR(C2) - FPR(C3) + FPR(C1)", fill=(80, 80, 80), font=f_note)
-    
+    navy, black = (0, 51, 102), (0, 0, 0)
+
+    # Axis headers
+    draw_text(draw, (400, 8), "Regional axis (\u03c1)", black, 38, True)
+    draw_text(draw, (225, 58), "Standard", navy, 34, True)
+    draw_text(draw, (720, 58), "Indian English", navy, 34, True)
+    draw_text(draw, (12, 8), "Temporal axis (\u03c4)", black, 36, True)
+    draw_text(draw, (12, 195), "Contemp.", navy, 32, True)
+    draw_text(draw, (12, 420), "Historical", navy, 32, True)
+
+    box_w, box_h = 430, 205
+    xs = [190, 645]
+    ys = [110, 335]
+    boxes = [
+        (0, 0, "C1: Baseline", "Contemporary std.", "(\u03c4 = Contemp., \u03c1 = Std.)", "100% in-vocab tokens"),
+        (1, 0, "C3: Regional", "Colloquial Indian", "(\u03c4 = Contemp., \u03c1 = Reg.)", "66.4% in-vocab tokens"),
+        (0, 1, "C2: Historical", "Victorian formal", "(\u03c4 = Hist., \u03c1 = Std.)", "54.4% in-vocab tokens"),
+        (1, 1, "C4: Combined", "Colonial administrative", "(\u03c4 = Hist., \u03c1 = Reg.)", "45.2% in-vocab tokens"),
+    ]
+    for cx, cy, title, reg, taurho, cov in boxes:
+        x, y = xs[cx], ys[cy]
+        draw.rectangle([x, y, x + box_w, y + box_h], outline=black, width=3, fill=(245, 248, 254))
+        draw_text(draw, (x + 18, y + 12), title, navy, 38, True)
+        draw_text(draw, (x + 18, y + 66), reg, black, 32, True)
+        draw_text(draw, (x + 18, y + 114), taurho, (50, 50, 50), 30)
+        draw_text(draw, (x + 18, y + 156), cov, (70, 70, 70), 30)
+
+    # Bottom notes
+    draw_text(draw, (190, 570), "Labels fixed: y \u2208 {0, 1}", (40, 40, 40), 32)
+    draw_text(draw, (190, 612), "Cos-sim \u2265 0.70; length ratio in [0.70, 2.50]", (40, 40, 40), 32)
+    draw_text(draw, (190, 654), "Interaction: FPR(C4) \u2212 FPR(C2) \u2212 FPR(C3) + FPR(C1)", (60, 60, 60), 30)
+
     for d in ['paper', 'paper/overleaf_package']:
         img.save(os.path.join(d, 'fig1.pdf'), 'PDF', resolution=300.0)
-    print("Generated enhanced fig1.pdf with large, bold fonts")
+    img.save('paper/figures/fig1_preview_check.png')
+    print("Generated fig1.pdf with larger fonts")
 
 def make_fig2_pdf():
     w, h = 1500, 950

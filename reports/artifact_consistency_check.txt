@@ -1,0 +1,30 @@
+OK   FP unweighted Word_LogReg     historical paper=10 recomputed=10
+OK   FP unweighted Word_LogReg     regional   paper=10 recomputed=10
+OK   FP unweighted Word_LogReg     combined   paper=10 recomputed=10
+OK   FP unweighted Word_LinearSVC  historical paper=5 recomputed=5
+OK   FP unweighted Word_LinearSVC  regional   paper=2 recomputed=2
+OK   FP unweighted Word_LinearSVC  combined   paper=8 recomputed=8
+OK   FP unweighted Char_LogReg     historical paper=9 recomputed=9
+OK   FP unweighted Char_LogReg     regional   paper=8 recomputed=8
+OK   FP unweighted Char_LogReg     combined   paper=9 recomputed=9
+OK   FP unweighted Char_Ridge      historical paper=5 recomputed=5
+OK   FP unweighted Char_Ridge      regional   paper=3 recomputed=3
+OK   FP unweighted Char_Ridge      combined   paper=8 recomputed=8
+OK   FP balanced   Word_LogReg     historical paper=3 recomputed=3
+OK   FP balanced   Word_LogReg     regional   paper=2 recomputed=2
+OK   FP balanced   Word_LogReg     combined   paper=7 recomputed=7
+OK   FP balanced   Word_LinearSVC  historical paper=3 recomputed=3
+OK   FP balanced   Word_LinearSVC  regional   paper=2 recomputed=2
+OK   FP balanced   Word_LinearSVC  combined   paper=7 recomputed=7
+OK   FP balanced   Char_LogReg     historical paper=3 recomputed=3
+OK   FP balanced   Char_LogReg     regional   paper=2 recomputed=2
+OK   FP balanced   Char_LogReg     combined   paper=5 recomputed=5
+OK   FP balanced   Char_Ridge      historical paper=3 recomputed=3
+OK   FP balanced   Char_Ridge      regional   paper=2 recomputed=2
+OK   FP balanced   Char_Ridge      combined   paper=5 recomputed=5
+OK   coverage baseline   paper=219/219 recomputed=219/219
+OK   coverage historical paper=258/474 recomputed=258/474
+OK   coverage regional   paper=221/333 recomputed=221/333
+OK   coverage combined   paper=271/600 recomputed=271/600
+OK   intercept Word_LogReg (unweighted) paper=(0.477, 0.617) recomputed=(0.477, 0.617)
+DIFF intercept Char_LogReg (unweighted) paper=(0.4451, 0.61) recomputed=(0.4451, 0.609)

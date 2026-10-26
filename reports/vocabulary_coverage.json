@@ -1,0 +1,45 @@
+{
+  "token_pattern": "(?u)\\b\\w\\w+\\b",
+  "c1_unigram_vocab_size": 155,
+  "conditions": {
+    "baseline": {
+      "total_tokens": 219,
+      "in_vocab_tokens": 219,
+      "coverage_percent": 100.0
+    },
+    "historical": {
+      "total_tokens": 474,
+      "in_vocab_tokens": 258,
+      "coverage_percent": 54.4
+    },
+    "regional": {
+      "total_tokens": 333,
+      "in_vocab_tokens": 221,
+      "coverage_percent": 66.4
+    },
+    "combined": {
+      "total_tokens": 600,
+      "in_vocab_tokens": 271,
+      "coverage_percent": 45.2
+    }
+  },
+  "logreg_intercepts": {
+    "Word_LogReg (unweighted)": {
+      "intercept": 0.477,
+      "sigmoid_intercept": 0.617
+    },
+    "Char_LogReg (unweighted)": {
+      "intercept": 0.4451,
+      "sigmoid_intercept": 0.609
+    },
+    "Word_LogReg (balanced)": {
+      "intercept": 0.1538,
+      "sigmoid_intercept": 0.538
+    },
+    "Char_LogReg (balanced)": {
+      "intercept": 0.1194,
+      "sigmoid_intercept": 0.53
+    }
+  },
+  "training_prior_malicious": 0.6
+}
